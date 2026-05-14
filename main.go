@@ -20,6 +20,10 @@ func main() {
 	// CORS middleware
 	router.Use(CORSMiddleware())
 
+	// Serve static files (logos and videos)
+	router.Static("/img", "./img")
+	router.Static("/videos", "./img/videos")
+
 	// API routes
 	api := router.Group("/api/v1")
 	{

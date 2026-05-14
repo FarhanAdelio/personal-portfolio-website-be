@@ -27,7 +27,7 @@ func GetProfile(c *gin.Context) {
 		"social": map[string]string{
 			"github":   "https://github.com/farhanadelio",
 			"linkedin": "https://linkedin.com/in/farhanadelio",
-			"twitter":  "https://twitter.com/farhanadelio",
+			"twitter":  "https://www.instagram.com/farhanadelio/",
 		},
 	}
 
@@ -46,21 +46,22 @@ func GetExperiences(c *gin.Context) {
 			"position":    "IT Support & Data Analysis Intern",
 			"type":        "Internship",
 			"location":    "Jakarta, Indonesia",
-			"startDate":   "2024-06",
-			"endDate":     "2024-12",
-			"description": "Membantu dalam pengolahan dan penyusunan data pendidikan, analisis kebutuhan sistem/aplikasi, serta mendukung dokumentasi sistem dan data. Berkolaborasi dengan tim teknis dan non-teknis untuk meningkatkan efisiensi proses bisnis.",
+			"startDate":   "2024-12",
+			"endDate":     "2026-2",
+			"logo":        "/img/logo/logodinas.png",
+			"description": "Assisted in processing and compiling educational data, analyzing system/application requirements, and supporting system and data documentation. Collaborated with technical and non-technical teams to improve business process efficiency.",
 			"achievements": []string{
-				"Menganalisis dan mengolah data mentah menjadi informasi yang actionable untuk pengambilan keputusan",
-				"Membantu mapping business process dan workflow untuk digitalisasi sistem",
-				"Membuat dokumentasi requirement analysis untuk pengembangan aplikasi internal",
-				"Berkontribusi dalam komunikasi lintas departemen (IT, humas, data, manajemen)",
+				"Analyzed and processed raw data into actionable information for decision-making",
+				"Assisted in mapping business processes and workflows for system digitalization",
+				"Created requirement analysis documentation for internal application development",
+				"Contributed to cross-departmental communication (IT, public relations, data, management)",
 			},
 			"technologies": []string{"SQL", "PostgreSQL", "Python", "Excel", "Data Analysis"},
 			"learnings": []string{
-				"Memahami cara kerja sistem pemerintahan dan alur birokrasi",
-				"Pengalaman mengolah data dari mentah hingga siap pakai",
-				"Pentingnya data accuracy untuk decision making",
-				"Skill komunikasi dengan stakeholder non-teknis",
+				"Understanding government systems workflow and bureaucracy",
+				"Experience in processing data from raw to ready-to-use",
+				"The importance of data accuracy for decision making",
+				"Communication skills with non-technical stakeholders",
 			},
 		},
 	}
@@ -104,17 +105,17 @@ func GetEducation(c *gin.Context) {
 			"id":          1,
 			"institution": "Universitas Indonesia",
 			"degree":      "Bachelor of Information Systems",
-			"field":       "Sistem Informasi",
+			"field":       "Information Systems",
 			"startDate":   "2023",
 			"endDate":     "Present",
 			"status":      "Ongoing",
-			"description": "Fokus pada analisis, perancangan sistem, dan pemahaman proses bisnis dengan pendekatan yang menyelaraskan kebutuhan bisnis dan teknologi.",
+			"description": "Focused on analysis, system design, and business process understanding with an approach that aligns business needs with technology solutions.",
 			"relevantCourses": []string{
-				"Analisis & Perancangan Sistem Informasi",
-				"Manajemen Sistem Informasi",
-				"Sistem Informasi SDM",
-				"Pengantar Statistika",
-				"Arsitektur & Pemrograman Aplikasi",
+				"Information Systems Analysis & Design",
+				"Information Systems Management",
+				"Human Resource Information Systems",
+				"Introduction to Statistics",
+				"Application Architecture & Programming",
 				"Database Management",
 				"Business Process Management",
 			},
@@ -125,6 +126,7 @@ func GetEducation(c *gin.Context) {
 				"Database Design & SQL",
 				"Data Analysis Fundamentals",
 				"Requirements Engineering",
+
 			},
 		},
 	}
@@ -174,13 +176,13 @@ func GetSkills(c *gin.Context) {
 			{"name": "Excel/Spreadsheet", "level": 85, "icon": "📑"},
 		},
 		"programming": []map[string]interface{}{
-			{"name": "Python", "level": 70},
-			{"name": "SQL", "level": 80},
-			{"name": "Java", "level": 65},
-			{"name": "Golang", "level": 60},
-			{"name": "JavaScript/Vue", "level": 65},
-			{"name": "Dart/Flutter", "level": 60},
-			{"name": "Svelte", "level": 60},
+			{"name": "Python", "level": 70, "logo": "/img/logo/python.png"},
+			{"name": "SQL", "level": 80, "logo": "/img/logo/sql.png"},
+			{"name": "Java", "level": 65, "logo": "/img/logo/java.png"},
+			{"name": "Golang", "level": 60, "logo": "/img/logo/go.png"},
+			{"name": "Vue.js", "level": 65, "logo": "/img/logo/vue.png"},
+			{"name": "Flutter", "level": 60, "logo": "/img/logo/flutter.png"},
+			{"name": "Svelte", "level": 60, "logo": "/img/logo/svelte.png"},
 		},
 		"softSkills": []string{
 			"Komunikatif & Articulate",
@@ -190,16 +192,20 @@ func GetSkills(c *gin.Context) {
 			"Conceptual Problem Solving",
 			"Documentation",
 		},
-		"tools": []string{
-			"PostgreSQL",
-			"Draw.io / Lucidchart",
-			"Figma",
-			"Excel / Google Sheets",
-			"Git & GitHub",
-			"VS Code",
-			"Postman",
-			"DBeaver",
+		"tools": []map[string]interface{}{
+			{"name": "PostgreSQL", "logo": "/img/logo/postgre.png"},
+			{"name": "Figma", "logo": "/img/logo/figma.png"},
+			{"name": "Excel", "logo": "/img/logo/exel.png"},
+			{"name": "Github", "logo": "/img/logo/github.png"},
+			{"name": "VS Code", "logo": "/img/logo/vscode.png"},
+			{"name": "Postman", "logo": "/img/logo/postman.png"},
+			{"name": "Docker", "logo": "/img/logo/docker.png"},
+			{"name": "DBeaver", "logo": "/img/logo/Dbvear.png"},
+			{"name": "Gitlab", "logo": "/img/logo/gitlab.png"},
+			{"name": "Draw", "logo": "/img/logo/draw.png"},
+
 		},
+
 	}
 
 	c.JSON(http.StatusOK, gin.H{
@@ -213,11 +219,34 @@ func GetProjects(c *gin.Context) {
 	projects := []map[string]interface{}{
 		{
 			"id":          1,
-			"title":       "Personal Portfolio Website",
-			"description": "A modern, elegant personal website built with Go backend and SvelteKit frontend. Features dark theme, smooth animations, and responsive design.",
-			"technologies": []string{"Go", "SvelteKit", "TypeScript"},
-			"githubUrl":   "https://github.com/farhanadelio/portfolio",
+			"title":       "Smart Waste Management System",
+			"category":    "Fullstack",
+			"type":        []string{"Web App", "IoT System"},
+			"date":        "01/2026",
+			"description": "A comprehensive waste management system that streamlines garbage collection, tracking, and reporting. Features real-time monitoring, route optimization for waste collectors, and data analytics dashboard for waste management insights.",
+			"highlights": []string{
+				"Real-time Tracking",
+				"Route Optimization",
+				"Analytics Dashboard",
+				"Mobile-responsive",
+			},
+			"technologies": []string{"Go", "PostgreSQL", "SvelteKit", "TypeScript", "Docker", "Google Maps API"},
+			// "techIcons": []string{"🔷", "🐘", "🔥", "📘", "🐳", "🗺️"},
+			"githubUrl":   "https://github.com/FarhanAdelio/Retrash",
+			"liveUrl":     "https://waste-mgmt-demo.com",
 			"featured":    true,
+			"video":       "/videos/Screen Recording 2026-01-21 at 12.55.41.mp4",
+			"videoType":   "local",
+			"features": []string{
+				"User authentication and role-based access (Admin, Collector, Resident)",
+				"Real-time garbage collection status tracking with live updates",
+				"Interactive map showing collection routes and waste bin locations",
+				"Automated scheduling system for collection routes",
+				"Mobile app for waste collectors with offline support",
+				"Analytics dashboard with waste statistics and trends",
+				"Notification system for collection schedules and updates",
+				"Report generation for waste management insights",
+			},
 		},
 		{
 			"id":          2,
@@ -226,15 +255,19 @@ func GetProjects(c *gin.Context) {
 			"technologies": []string{"Go", "PostgreSQL", "Docker"},
 			"githubUrl":   "https://github.com/farhanadelio/api-service",
 			"featured":    false,
+			"video":       "",  // Bisa kosong jika tidak ada video
+			"videoType":   "local",
 		},
-		{
-			"id":          3,
-			"title":       "Task Management App",
-			"description": "Full-stack task management application with real-time updates and collaborative features.",
-			"technologies": []string{"Go", "SvelteKit", "WebSocket"},
-			"githubUrl":   "https://github.com/farhanadelio/task-app",
-			"featured":    false,
-		},
+		// {
+		// 	"id":          3,
+		// 	"title":       "Task Management App",
+		// 	"description": "Full-stack task management application with real-time updates and collaborative features.",
+		// 	"technologies": []string{"Go", "SvelteKit", "WebSocket"},
+		// 	"githubUrl":   "https://github.com/farhanadelio/task-app",
+		// 	"featured":    false,
+		// 	"video":       "dQw4w9WgXcQ",  // YouTube video ID (contoh)
+		// 	"videoType":   "youtube",
+		// },
 	}
 
 	c.JSON(http.StatusOK, gin.H{

@@ -67,7 +67,7 @@ func GetExperiences(c *gin.Context) {
 			"location":    "Jakarta, Indonesia",
 			"startDate":   "2026-01",
 			"endDate":     "2026-03",
-			"logo":        "/img/logo/company.png",
+			"logo":        "/img/logo/logopetroone.png",
 			"description": "Developed a web-based ERP system to support company operations and asset management within an IT services and system integration environment.",
 			"achievements": []string{
 				"Designed and implemented backend services using Java Spring Boot",
@@ -86,7 +86,7 @@ func GetExperiences(c *gin.Context) {
 			"location":    "Jakarta, Indonesia",
 			"startDate":   "2025-04",
 			"endDate":     "2025-09",
-			"logo":        "/img/logo/logodinas.png",
+			"logo":        "/img/logo/logokebudayaan.png",
 			"description": "Developed a web-based waste management system based on direct collaboration with government stakeholders, focusing on translating business needs into a functional digital solution.",
 			"achievements": []string{
 				"Conducted requirement gathering through discussions with Cultural Department head",
